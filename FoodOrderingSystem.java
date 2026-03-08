@@ -44,6 +44,7 @@ public class FoodOrderingSystem {
 		}
 
 		FoodOrderingSystem f = new FoodOrderingSystem(id, CustomerName, FoodItem);
+		f.billDisplay();
 
 		f.addExtraItem(extra);
 		int bill = f.calculateBill(price, Quantities);
@@ -91,6 +92,10 @@ public class FoodOrderingSystem {
 		int finalAmount = bill - dis;
 		System.out.println("Total bill after discount:" + finalAmount);
 
+	}
+
+	public void billDisplay() {
+		System.out.println("**********************Bill of the coustomer :***********************");
 	}
 
 }
